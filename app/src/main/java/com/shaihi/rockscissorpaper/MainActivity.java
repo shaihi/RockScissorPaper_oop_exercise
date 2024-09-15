@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView playerChoice;
     private TextView computerChoice;
     private TextView resultText;
-    private String[] choices = {"✊", "✋", "✌️"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +26,11 @@ public class MainActivity extends AppCompatActivity {
         Button buttonPaper = findViewById(R.id.button_paper);
         Button buttonScissors = findViewById(R.id.button_scissors);
 
-        buttonRock.setOnClickListener(view -> playGame("✊"));
-        buttonPaper.setOnClickListener(view -> playGame("✋"));
-        buttonScissors.setOnClickListener(view -> playGame("✌️"));
+        buttonRock.setOnClickListener(view -> playGame(new Rock()));
+        buttonPaper.setOnClickListener(view -> playGame(new Paper()));
+        buttonScissors.setOnClickListener(view -> playGame(new Scissors()));
     }
 
-    // Modify playGame method in MainActivity
     private void playGame(GameElement playerElement) {
         playerChoice.setText(getEmoji(playerElement));
         GameElement computerElement = getComputerChoice();
