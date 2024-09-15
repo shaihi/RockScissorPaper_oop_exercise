@@ -11,6 +11,6 @@ The return value for compareWith is as follows:
 - "You Win!" if the element implemented beats the received item
 
 ## Hints
-- Use instanceOf keyword to compare elements of instances
+- Use `instanceOf` keyword to compare elements of instances
 - Note that the result is case sensitive
   - Can you think on how to make it case insensitive?
